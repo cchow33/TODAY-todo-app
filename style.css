@@ -1,0 +1,143 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+body{
+    min-height: 450px;
+    height: 100vh;
+    margin: 0;
+    background: whitesmoke;
+    font-family: inherit;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 500px;
+    background: whitesmoke;
+    font: black;
+    border: 1px solid aquamarine; 
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* ============  HEADER ====================== */
+
+.header{
+    background-image: url(background-photo.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 160px;
+    position: relative;
+    font-size: 20px;
+    border-bottom: 2px solid aquamarine;
+}
+.today{
+    position: relative;
+    top: 5%;
+    left: 7%;
+    font-size: 50px;
+    color: black; 
+    font-weight: 800;
+    text-shadow: -5px 6px 5px #00e6e6,
+                 -10px 15px 2px #01cccc;
+}
+.date{
+    position: absolute;
+    top: 40%;
+    left: 9%;
+    font-size: 13px;
+    color: black;
+    font-weight: bold;
+}
+
+/* ============  CONTENT PART 1: js-form ====================== */
+
+.content {
+    padding: 10px 20px;
+    height: 290px;
+}
+.content input[type='text']{
+    padding: 0 5px;
+    font-weight: 500;
+    font-size: 14px;
+    color: black;
+    /* text-shadow: 1px 3px 0px rgba(0,0,0,0.2); */
+    outline: none;
+    width: 200px; 
+}
+.content form{
+    display: flex;
+    background: #eeeded; 
+    box-shadow: 0px 2px 4px lightskyblue;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 0 10;
+    border-bottom: 1px solid grey;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.content form > * {
+    background: transparent;
+    border: none;
+    height: 36px;
+}
+
+/* ============ CONTENT PART 2: TODO LIST ====================== */
+
+.content ul.list{
+    overflow: auto;
+    height: 220px;
+}
+.content li{
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 7px;
+    border-top: 1px dotted skyblue;
+}
+.content li:nth-child(0){
+    border-top: none;
+}
+.content input[type="checkbox"]:checked + label {
+  color: #aeb7c6;
+  text-decoration: line-through;
+}
+
+/* ============  FOOTER ====================== */
+
+.footer {
+    width: 275px;
+    height: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1px dotted grey;
+    padding-left: 100px;
+    margin-left: 20px; 
+    padding-top: 6px; 
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative; 
+}
+.icons i{
+    padding-right: 10px;
+    margin-right: 0px;
+    font-size: 20px; 
+    padding-top: 5px;
+    display: inline-flex;
+    text-align: right;
+}
+.icons i:hover{
+    color: skyblue;
+    cursor: pointer; 
+} 

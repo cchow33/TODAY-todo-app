@@ -1,97 +1,80 @@
-// Create an array to hold the todo list items
-let todoItems = ['run', 'seek', 'hide'];
+// Select DOM
+const addBtn = document.querySelector('.add-btn');
+const deleteBtn = document.querySelector('.trash-btn');
+const input = document.getElementById('input');
+const todoList = document.querySelector(".todo-list");
+const clearAll = document.getElementById('clearAll');
+const sort = document.getElementById('sort');
 
-// Create a function that creates a new todo object based on the text that the user entered
-// Push the new todo object into the array
+// Event Listeners
+// document.addEventListener("DOMContentLoaded", getTodos);
+addBtn.addEventListener("click", addTodo);
+todoList.addEventListener('click', deleteCheck);
+// deleteBtn.addEventListener("click", deleteTodo);
 
-function renderTodo(todo){
-    // Select the first element with a class of '.list'
-    const list = document.querySelector('.list');
+// Functions
 
-    // select the current todo item in the DOM;
-    // const item = document.querySelector(`data-keys='${todo.id}`);
-
-    // Check if 'todo.checked' is true, if so, assign 'done' to 'isChecked'. If false then assign an empty string
-    const isChecked = todo.checked ? 'done': '';
-    
-    // Create an 'li' element and assign it to 'node'
-    const node = document.createElement('li');
-
-    // Set the class attribute
-    node.setAttribute('class', `todo-item ${isChecked}`);
-    
-    // Set the data-key attribute to the id of the todo
-    node.setAttribute('data-key', todo.id);
-    
-    // Set the contents of the 'li' element created above 
-    node.innerHTML = `
-        <input id="${todo.id}" type="checkbox"  id=>
-        <label for="${todo.id}" class="tick js-tick"></label>
-        <span>${todo.text}</span>
-        <i class="fa fa-trash-o"></i>
-    `;
-
-    // If the item already exists in the DOM
-    if (item){
-        // replace it
-        list.replaceChild(node, item);
-    } else {
-        // append it to the end of the list      
-        list.append(node);
-    }
-}
-
-function addTodo(text){
-    const todo = {
-        text,
-        checked: false,
-        id: Date.now(), 
-    };
-
-    todoItems.push(todo);
-    console.log(todoItems);
-}
-
-// Select the form element
-const form = document.querySelector('.js-form');
-
-// Add a submit event listener
-form.addEventListener('submit', event => {
-   
-    // Stop page from refreshing on form submission
+// (1) Add new todo task:
+function addTodo(event) {
+    console.log('Adding item')
+    // Prevent browser from refreshing/form from submitting
     event.preventDefault();
+    // Create a div called 'todoDiv'
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
+        // Create Checked Button
+        const completedButton = document.createElement("button");
+        completedButton.innerHTML = `<i class="fa fa-check"></i>`;
+        completedButton.classList.add("complete-btn");
+        todoDiv.appendChild(completedButton);
+        // Create a list called 'newTodo'
+        const newTodo = document.createElement("li");
+        newTodo.innerText = input.value;
+        // Save to local - do this last
+        // Save to local
+        // saveLocalTodos(input.value);
+        newTodo.classList.add("todo-item");
+        todoDiv.appendChild(newTodo);
+        input.value = "";
+        // Create delete trashcan button
+        const trashButton = document.createElement("button");
+        trashButton.innerHTML = `<i class="fa fa-trash"></i>`;
+        trashButton.classList.add("trash-btn");
+        todoDiv.appendChild(trashButton);
+    //attach final Todo
+    todoList.appendChild(todoDiv);
+  }
 
-    // Select the text input
-    const input = document.getElementById('input');
+// (2) Delete a todo task:
+function deleteCheck(e) {
+    const item = e.target;
+    console.log(e.target);
 
-    // Get the value of the input and remove any spaces;
-    const text = input.value.trim();
-    console.log(text)
-    if (text !== ''){
-        addTodo(text); // run function
-        input.value = ''; // clear value of text input after running function
-        input.focus(); // text input is focused so user can add > 1 item without have to refocus input - necesary??
-    }   
-});
-
-// Listen for the item being checked off
-
-// Select the entire list
-const list = document.querySelector('.list');
-
-// Add a click event listener to the list and its children
-list.addEventListener('click', event => {
-    if (event.target.classList.contains('js-tick')){
-        const itemKey = event.target.parentElement.dataset.key;
-        toggleDone(itemKey);
+    if (item.classList[0] === "trash-btn") {
+        console.log('deleting item')
+        const todo = item.parentElement;
+        todo.remove();
     }
-});
 
+        // // e.target.parentElement.remove();
+        // const todo = .parentElement;
+        // // todo.classList.add("fall");
+        // // //at the end
+        // removeLocalTodos(todo);
+        // todo.addEventListener("transitionend", e => {
+        // todo.remove();
+        // });
 
-// Clear text when user clicks in input box
+    if (item.classList[0] === "complete-btn") {
+        const todo = item.parentElement;
+        todo.classList.toggle("completed");
+        console.log(todo);
+    
+}
 
-input.onclick = function clear() {
-    document.getElementById('input').value = '';
-    placeholder = '';
-    console.log('Clear placeholder')   
+// Clear all tasks
+clearAll.onclick = function clearTasks(){
+    console.log('Delete all tasks')
+    list.innerHTML = '';
+}
 }

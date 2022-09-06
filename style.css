@@ -25,11 +25,9 @@ body{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-
 /* ============  HEADER ====================== */
-
 .header{
-    background-image: url(background-photo.jpeg);
+    background-image: url('background-photo.jpeg');
     background-size: cover;
     background-position: center;
     border-top-left-radius: 10px;
@@ -58,25 +56,30 @@ body{
     font-weight: bold;
 }
 
-/* ============  CONTENT PART 1: js-form ====================== */
+/* ============  CONTENT PART 1: ADD-ITEM ====================== */
 
+.add-btn{
+   padding-right: 10px; 
+}
+.add-btn:hover{
+    font-weight: bolder;
+}
 .content {
     padding: 10px 20px;
     height: 290px;
 }
 .content input[type='text']{
-    padding: 0 5px;
+    padding-left: 15px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 1rem;
     color: black;
-    /* text-shadow: 1px 3px 0px rgba(0,0,0,0.2); */
+    text-shadow: 1px 3px 0px rgba(0,0,0,0.2);
     outline: none;
     width: 200px; 
 }
 .content form{
     display: flex;
     background: #eeeded; 
-    box-shadow: 0px 2px 4px lightskyblue;
     justify-content: space-between;
     margin-bottom: 10px;
     padding: 0 10;
@@ -91,7 +94,23 @@ body{
     border: none;
     height: 36px;
 }
-
+.trash-btn,
+.complete-btn {
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: grey;
+}
+.trash-btn:hover{
+    color: red;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+  
 /* ============ CONTENT PART 2: TODO LIST ====================== */
 
 .content ul.list{
@@ -100,10 +119,13 @@ body{
 }
 .content li{
     color: black;
-    font-size: 15px;
+    font-size: 13px;
     cursor: pointer;
-    padding: 7px;
-    border-top: 1px dotted skyblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: auto;
+    /* padding: 7px; */
 }
 .content li:nth-child(0){
     border-top: none;
@@ -112,7 +134,25 @@ body{
   color: #aeb7c6;
   text-decoration: line-through;
 }
-
+.todo{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: auto;
+    vertical-align: middle;
+    width: 100%;
+    height: 34px;
+    padding: 0px;
+    margin: 0px;
+}
+.todo-item{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: row;
+    line-height: 60px;
+    padding: 0px;
+}
 /* ============  FOOTER ====================== */
 
 .footer {
@@ -135,9 +175,12 @@ body{
     font-size: 20px; 
     padding-top: 5px;
     display: inline-flex;
-    text-align: right;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: transparent;
 }
 .icons i:hover{
-    color: skyblue;
+    color: lightseagreen;
     cursor: pointer; 
-} 
+}

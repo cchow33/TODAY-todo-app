@@ -29,7 +29,7 @@ addBtn.addEventListener('click', (e) => {
     }
     input.value = '';
 
-    // Delete all tasksd
+    // Delete all tasks
     clearAll.addEventListener('click', (e) => {
         console.log('Delete all tasks')
         list.innerHTML = ''; 

@@ -6,52 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List App </title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/0eb3a74e90.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="container">
-    <div class="header">  
-    <p class="today">TODAY</p>  
-    <p class="date">AUGUST 4th, 2022</p>     
-    </div>
+    <div class="container">
+        <div class="banner">  
+            <p class="today">TODAY</p>  
+            <p class="date">GET IT DONE</p> 
+        </div>
 
-    <div class="content">   
-        <form class="js-form">
-            <input type="text" id="input" aria-label="new list name"></input>
-            <button class="add-btn">Add</button>
-        </form>
-    
-        <div class="todo-container">
-            <ul class="todo-list"> 
-        
-        <!-- <div class="todo">
-                <li>
-                   <button>delete</button>
-                    <button>checked</button>
-                </li>
-             </div> -->
+        <div class="content">  
+            <div class="row"> 
+                <p class="text">Add a task:</p>
+                <button id="clearAll"><img src="./refresh.png" width="20px" height="20px"></button>     
+            </div> 
+            <form class="js-form">
+                <input type="text" id="input" aria-label="new list name"></input>
+                <button class="add-btn">+</button>
+                <button type="submit" class="btn-list"></button> 
+            </form>
+            <p class="text">To do:</p>
             
-            </ul>
-        </div> 
-
-</div>
-
-<div class="footer">
-    <div class="navbar">
-    <icon class="icons">
-        <button id="sort"><i class="fa fa-bars"></i></button>
-        <button id="clearAll"><img src="sweep.png" width="22px" height="22px"></button>
-        <i class="fa fa-edit"></i>
+            <div class="todo-container">
+                <ul class="todo-list">
+                    <!-- Add Javascript here -->
+                </ul>
+            </div> 
+        </div>
     </div>
-</div>
     
 <script src="app.js"></script>
-<script src="https://use.fontawesome.com/0eb3a74e90.js"></script>
 </body>
 
 </html>
+
+
 

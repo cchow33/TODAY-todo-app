@@ -6,12 +6,12 @@ Start by entering a new task in the input field and then click on the checkmark 
 
 ![demo](https://user-images.githubusercontent.com/109078860/189765275-dad33dc8-dbd0-405a-acd5-7803763f02d2.png)
 
-** Technologies Used **
+**Technologies Used**
 HTML
 CSS
 JavaScript
 
-** Link **
+**Link**
 
 
 

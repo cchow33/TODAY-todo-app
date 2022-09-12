@@ -9,7 +9,6 @@ body{
     min-height: 450px;
     height: 100vh;
     margin: 0;
-    background: whitesmoke;
     font-family: inherit;
 }
 .container{
@@ -19,50 +18,71 @@ body{
     transform: translate(-50%, -50%);
     width: 320px;
     height: 500px;
-    background: whitesmoke;
+    background: transparent;
     font: black;
     border: 1px solid aquamarine; 
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) -5px -3px 5px;
 }
-/* ============  HEADER ====================== */
-.header{
-    background-image: url('background-photo.jpeg');
+
+/* ======================  BANNER  ====================== */
+
+.banner{
+    background-image: url('background-photo.jpeg'); 
     background-size: cover;
     background-position: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    height: 160px;
+    height: 140px;
     position: relative;
     font-size: 20px;
     border-bottom: 2px solid aquamarine;
 }
 .today{
     position: relative;
-    top: 5%;
+    top: 8%;
     left: 7%;
-    font-size: 50px;
+    font-size: 50px; 
     color: black; 
     font-weight: 800;
-    text-shadow: -5px 6px 5px #00e6e6,
-                 -10px 15px 2px #01cccc;
+    text-shadow: -5px 6px 5px #00e6e6, 
+                 -10px 15px 2px #01cccc; 
 }
 .date{
     position: absolute;
-    top: 40%;
-    left: 9%;
+    top: 8%;
+    left: 7%;
     font-size: 13px;
     color: black;
     font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* ============  CONTENT PART 1: ADD-ITEM ====================== */
 
-.add-btn{
-   padding-right: 10px; 
+.text{
+    font-size: 14px;
+    margin-top: 0px;
+    font-weight: bold;
 }
-.add-btn:hover{
-    font-weight: bolder;
+#clearAll{
+    display: flex;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    outline: none;
+    border: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+    color: white;
+}
+#clearAll img{
+    color: white;
 }
 .content {
     padding: 10px 20px;
@@ -73,7 +93,6 @@ body{
     font-weight: 500;
     font-size: 1rem;
     color: black;
-    text-shadow: 1px 3px 0px rgba(0,0,0,0.2);
     outline: none;
     width: 200px; 
 }
@@ -84,103 +103,72 @@ body{
     margin-bottom: 10px;
     padding: 0 10;
     border-bottom: 1px solid grey;
-    border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    box-shadow: -3px 6px 4px #222;
+    position: relative;
 }
 .content form > * {
     background: transparent;
     border: none;
     height: 36px;
 }
-.trash-btn,
-.complete-btn {
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1.2rem;
-  background-color: transparent;
-  color: grey;
+.add-btn{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 40px;
+    text-align: centre;
+    background-color: paleturquoise !important;
+    cursor: pointer;
+    font-size: 30px;
 }
-.trash-btn:hover{
-    color: red;
+.add-btn:hover{
+    background: paleturquoise;
 }
-.completed {
-    text-decoration: line-through;
-    opacity: 0.5;
+.add-btn:hover{
+    font-weight: bolder;
 }
   
-/* ============ CONTENT PART 2: TODO LIST ====================== */
+/* ============ PART 2: TODO LIST ====================== */
 
-.content ul.list{
-    overflow: auto;
-    height: 220px;
-}
-.content li{
-    color: black;
-    font-size: 13px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    margin-left: auto;
-    /* padding: 7px; */
-}
-.content li:nth-child(0){
-    border-top: none;
-}
-.content input[type="checkbox"]:checked + label {
-  color: #aeb7c6;
-  text-decoration: line-through;
-}
-.todo{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    margin-left: auto;
-    vertical-align: middle;
+.content ul li{
     width: 100%;
-    height: 34px;
-    padding: 0px;
-    margin: 0px;
-}
-.todo-item{
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    flex-direction: row;
-    line-height: 60px;
-    padding: 0px;
-}
-/* ============  FOOTER ====================== */
-
-.footer {
-    width: 275px;
+    background: white;
     height: 40px;
-    border-bottom-left-radius: 10px;
+    line-height: 40px;
+    padding: 0 5px;
+    position: relative;
+    border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border-top: 1px dotted grey;
-    padding-left: 100px;
-    margin-left: 20px; 
-    padding-top: 6px; 
-    display: flex;
-    justify-content: space-between;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     cursor: pointer;
-    position: relative; 
+    display: block;
+    margin: 5px 0px;
+    box-shadow: -2px 4px 2px #222;
+    transition: 0.5s linear;
 }
-.icons i{
-    padding-right: 10px;
-    margin-right: 0px;
-    font-size: 20px; 
-    padding-top: 5px;
-    display: inline-flex;
+.content ul li:nth-child(5) ~ li{
+    display: none;
+}
+.content ul li span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
     text-align: center;
-    outline: none;
-    border: none;
-    background-color: transparent;
+    background: paleturquoise;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
 }
-.icons i:hover{
-    color: lightseagreen;
-    cursor: pointer; 
+.content ul li span:hover{
+    color: white;
+    background: black;
 }
+

@@ -24,7 +24,7 @@ addBtn.addEventListener('click', (e) => {
             close[i].parentElement.style.opacity = 0;
             setTimeout(() => {
                 close[i].parentElement.style.display = 'none';
-            }, 500);
+            }, 600);
         })
     }
     input.value = '';

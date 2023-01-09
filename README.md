@@ -3,7 +3,7 @@
 Start by entering a new task in the input field and then click on the checkmark each time you complete a task to automatically delete the task from your to-do list. 
 
 **Link**
-[today-todolist-app.netlify.app](today-todolist-app.netlify.app)
+(today-todolist-app.netlify.app)
 https://todo-app-carpediem.netlify.app/
 
 

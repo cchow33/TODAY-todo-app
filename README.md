@@ -4,7 +4,7 @@ Start by entering a new task in the input field and then click on the checkmark 
 
 **Link**
 https://todo-app-carpediem.netlify.app/
-
+<a href="https://www.flaticon.com/free-icons/calendar" title="calendar icons">Calendar icons created by Freepik - Flaticon</a>                
 
 ![design](https://user-images.githubusercontent.com/109078860/189769914-d9119bc9-e91b-44a5-ae8a-561cda04867f.png)
 ![demo](https://user-images.githubusercontent.com/109078860/189770195-49950995-40ea-4569-892e-9e3d46430a8a.png)

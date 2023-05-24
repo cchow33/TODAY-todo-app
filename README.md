@@ -6,7 +6,7 @@ Start by entering a new task in the input field and then click on the checkmark 
 **Link**
 https://todo-app-carpediem.netlify.app/
 
-<img src="https://user-images.githubusercontent.com/109078860/189770195-49950995-40ea-4569-892e-9e3d46430a8a.png" width="300" height="350"/>
+<img src="https://user-images.githubusercontent.com/109078860/189770195-49950995-40ea-4569-892e-9e3d46430a8a.png" width="350" height="400"/>
 
 **Technologies Used**
 HTML
